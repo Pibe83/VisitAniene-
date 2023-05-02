@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+Visitaniene
+Visitaniene è un'applicazione web sviluppata in React che consente agli utenti di prenotarsi alle varie attività offerte dalla città di Noto e di controllare il meteo in tempo reale e del giorno successivo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Funzionalità
+L'applicazione Visitaniene presenta le seguenti funzionalità:
 
-## Available Scripts
+Prenotazione delle attività offerte dalla città di Noto.
+Visualizzazione del meteo in tempo reale e del giorno successivo a Noto.
+Modifica o cancellazione delle prenotazioni effettuate.
+Tecnologie utilizzate
+Il progetto Visitaniene è stato sviluppato utilizzando le seguenti tecnologie:
 
-In the project directory, you can run:
+React
+React Router
+OpenWeatherMap API per il meteo
+Firebase per l'autenticazione e la gestione dei dati
+Requisiti
+Per eseguire il progetto Visitaniene sul tuo computer, devi avere installato:
 
-### `npm start`
+Node.js
+NPM (Node Package Manager)
+Installazione
+Per installare il progetto Visitaniene, segui questi passaggi:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clona il repository sul tuo computer.
+Apri il terminale nella cartella del progetto.
+Esegui il comando "npm install" per installare le dipendenze.
+Esegui il comando "npm start" per avviare il server di sviluppo.
+Contributi
+Siamo aperti a contributi da parte della community. Se vuoi contribuire al progetto Visitaniene, segui questi passaggi:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Forka il repository.
+Clona il repository sul tuo computer.
+Esegui il comando "npm install" per installare le dipendenze.
+Crea un nuovo branch per le tue modifiche.
+Fai le tue modifiche e testale localmente.
+Fai commit delle tue modifiche e pusha il branch sul tuo fork.
+Crea una pull request nel repository originale.
+Licenza
+Il progetto Visitaniene è rilasciato con licenza [tipo di licenza]. Per maggiori informazioni, consulta il file LICENSE.
