@@ -1,19 +1,20 @@
 Visitaniene
-Visitaniene è un'applicazione web sviluppata in React che consente agli utenti di prenotarsi alle varie attività offerte dalla città di Noto e di controllare il meteo in tempo reale e del giorno successivo.
+Visitaniene è un'applicazione web sviluppata in React che consente agli utenti di prenotarsi alle varie attività offerte dalla città di Subiaco e di controllare il meteo in tempo reale e del giorno successivo.
 
 Funzionalità
 L'applicazione Visitaniene presenta le seguenti funzionalità:
 
-Prenotazione delle attività offerte dalla città di Noto.
-Visualizzazione del meteo in tempo reale e del giorno successivo a Noto.
+Prenotazione delle attività offerte dalla città di Subiaco.
+Visualizzazione del meteo in tempo reale e del giorno successivo a Subiaco.
 Modifica o cancellazione delle prenotazioni effettuate.
 Tecnologie utilizzate
 Il progetto Visitaniene è stato sviluppato utilizzando le seguenti tecnologie:
 
 React
+React Bootstrap
 React Router
 OpenWeatherMap API per il meteo
-Firebase per l'autenticazione e la gestione dei dati
+
 Requisiti
 Per eseguire il progetto Visitaniene sul tuo computer, devi avere installato:
 

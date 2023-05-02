@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,137 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* NAVBAR */
+
+
+.navbar {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-link {
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745;
+}
+
+.dropdown-menu {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #28a745;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Jumbotrone */
+
+.jumbotron {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+.riga {
+  background: linear-gradient(to right, #EAF6F5, #FFFFFF);
+}
+
+
+/* CAROSELLO */
+
+.carousel-item img {
+  border: 0px solid black; /* bordo di 5 pixel, colore nero */
+   /* ombreggiatura di 5 pixel, colore nero con una trasparenza del 50% */
+}
+.button:hover {
+  background-color: #007bff; /* blu Bootstrap */
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.card-img-top {
+  height: 50%;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.carousel-caption button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+  
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev {
+  left: -3%;
+}
+
+.carousel-control-next {
+  right: -3%;
 }
