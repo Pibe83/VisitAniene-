@@ -2,12 +2,13 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Image, Container } from 'react-bootstrap';
 import logo from '../immagini/logo3.jpg';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
     <Navbar sticky="top" bg="white" expand="lg" className="py-3">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             width="60"
@@ -22,7 +23,7 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

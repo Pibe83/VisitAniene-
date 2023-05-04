@@ -1,19 +1,41 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navigation from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyJumbotron from './components/MyJumbotrone';
 import MyCarousel from './components/Carosello';
 import Footer from './components/Footer';
+import RaftingPage from './components/RaftingPage';
+import CanoaPage from './components/CanoaPage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CanyoningPage from './components/CanyoningPage';
+import ClimbingPage from './components/ClimbingPage';
+import TrekkingPage from './components/TrekkingPage';
+import SurvivalPage from './components/SurvivalPage';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+    <div className='sfondo'>
       <Navigation />
       <MyJumbotron />
-      <MyCarousel />
+      
+      <Routes>
+        <Route path="/" element={<MyCarousel />} />
+        <Route path="/raftingpage" element={<RaftingPage />} />
+        <Route path="/canoa" element={<CanoaPage />} />
+        <Route path="/canyoning" element={<CanyoningPage />} />
+        <Route path="/climbing" element={<ClimbingPage />} />
+        <Route path="/trekking" element={<TrekkingPage />} />
+        <Route path="/survival" element={<SurvivalPage />} />
+      </Routes>
       <Footer />
+      
+      
+      
+      
     </div>
+  </Router>
   );
 }
 

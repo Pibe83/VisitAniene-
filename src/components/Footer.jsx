@@ -1,6 +1,8 @@
 import { FaFacebook, FaInstagram, FaYoutube, FaGoogle } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import tripadv from '../immagini/tripadvisor.jpg'
+
 function Footer() {
   return (
     <footer className='bg-black py-3 mt-5'>
@@ -19,8 +21,7 @@ function Footer() {
             <p>VisitAniene è un'azienda che si occupa di organizzare attività outdoor per persone di tutte le età.</p>
           </Col>
           <Col md={4}>
-            <h5>Lavora con noi</h5>
-            <p>Siamo sempre alla ricerca di persone appassionate del mondo outdoor e dello sport in generale. Invia il tuo curriculum a lavora@visitaniene.it.</p>
+          <img src={tripadv} width="100" alt="Logo VisitAniene"  />
           </Col>
         </Row>
         <Row className='mt-4'>

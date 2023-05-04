@@ -108,9 +108,8 @@
   font-size: 1.5rem;
 }
 
-.riga {
-  background: linear-gradient(to right, #EAF6F5, #FFFFFF);
-
+.text-ridotta {
+  font-size: 34px;
 }
 
 
@@ -119,32 +118,30 @@
 /* CAROSELLO */
 
 .carousel-item img {
-  border: 0px solid black; /* bordo di 5 pixel, colore nero */
-   /* ombreggiatura di 5 pixel, colore nero con una trasparenza del 50% */
-}
-.button:hover {
-  background-color: #007bff; /* blu Bootstrap */
+  border: 0px solid black;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item:hover img {
   transform: scale(1.1);
-  transition: transform 0.5s;
 }
+
 .card-img-top {
   height: 50%;
 }
 
 .carousel-item {
   text-align: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
+.carousel-item:hover {
+  transform: scale(1.1);
 }
 
 .carousel-caption {
-  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -156,12 +153,12 @@
   font-size: 1.2rem;
   padding: 10px 20px;
   margin-top: 10px;
-  
+  transition: color 0.5s ease-in-out;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none;
+.carousel-caption button:hover {
+  
+  color: black;
 }
 
 .carousel-control-prev,
@@ -176,18 +173,9 @@
 .carousel-control-next {
   right: -3%;
 }
-.carousel-item {
-  transition: transform 0.5s ease-in-out;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
 }
 
-.carousel-item:hover {
-  transform: scale(1.1);
-}
-
-.carousel-item button {
-  transition: color 0.5s ease-in-out;
-}
-
-.carousel-item:hover button {
-  color: black;
-}
