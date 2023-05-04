@@ -15,7 +15,7 @@ function Navigation() {
             className="d-inline-block align-top logo"
             alt="Logo"
           />
-          <span className='text-success display-5 font-weight-bold ml-3'style={{ fontFamily: 'Shadows Into Light'}}>VisitAniene</span>
+          <span className='text-success display-5 font-weight-bold ml-3'style={{ fontFamily: 'cursive', fontStyle:'Shadows Into Light'}}>VisitAniene</span>
          
          
         </Navbar.Brand>
