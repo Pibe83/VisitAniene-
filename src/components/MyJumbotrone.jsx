@@ -12,7 +12,7 @@ function MyJumbotron() {
     <Container className='mt-3'>
 
       <Row className='' style={{ position: 'relative', height: '50vh' }} >
-        <video autoPlay muted loop style={{ position: 'absolute', zIndex: '-1', width: '100%', height: '100%', objectFit: 'cover' }}>
+        <video autoPlay muted loop style={{ position: 'absolute', zIndex: '-1', width: '100vw', height: '110%', objectFit: 'cover' }}>
           <source src={require('../immagini/video1.mp4')} type='video/mp4' />
         </video>
         <Col md={4}>

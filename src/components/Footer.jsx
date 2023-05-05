@@ -21,7 +21,7 @@ function Footer() {
             <p>VisitAniene è un'azienda che si occupa di organizzare attività outdoor per persone di tutte le età.</p>
           </Col>
           <Col md={4}>
-          <img src={tripadv} width="100" alt="Logo VisitAniene"  />
+          <img src={tripadv} width="100" alt="Logo VisitAniene" className='trip'  />
           </Col>
         </Row>
         <Row className='mt-4'>

@@ -1,11 +1,12 @@
-import Glide from '@glidejs/glide';
+
 import { Carousel } from 'react-bootstrap';
 import img1 from '../immagini/rafting1.jpg';
-import img2 from '../immagini/img2.jpg';
+import img2 from '../immagini/packraft.jpg';
 import img3 from '../immagini/img3.jpg';
 import img4 from '../immagini/arrampicata.jpg';
-import img5 from '../immagini/img5.jpg';
-import img6 from '../immagini/img6.jpg';
+import img5 from '../immagini/trekking2.png';
+import img6 from '../immagini/survival2.jpg';
+
 
 
 
@@ -33,9 +34,9 @@ function MyCarousel() {
     <div className="row">
       <div className="col-md-12">
         <div className="d-flex justify-content-center mt-5">
-          <Carousel pauseOnHover={true} indicators={false} slideToShow={3} slideToScroll={3}>
+          <Carousel pauseOnHover={true} indicators={false} slideToShow={2} slideToScroll={1}>
             <Carousel.Item>
-              <img className="d-block w-30" src={img1} alt="First slide" />
+              <img className="d-block w-30" src={img1} alt="First slide"  />
               <Carousel.Caption>
                 <button className="btn btn-success rounded-pill" onClick={() => handleClick("Rafting")}>Rafting</button>
               </Carousel.Caption>
