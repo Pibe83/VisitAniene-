@@ -12,6 +12,7 @@ import CanyoningPage from './components/CanyoningPage';
 import ClimbingPage from './components/ClimbingPage';
 import TrekkingPage from './components/TrekkingPage';
 import SurvivalPage from './components/SurvivalPage';
+import WeatherApp from './components/MyMeteo';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/trekking" element={<TrekkingPage />} />
         <Route path="/survival" element={<SurvivalPage />} />
       </Routes>
+      <WeatherApp />
       <Footer />
       
       
