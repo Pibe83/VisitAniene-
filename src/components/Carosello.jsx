@@ -1,9 +1,9 @@
 
 import { Carousel } from 'react-bootstrap';
-import img1 from '../immagini/rafting1.jpg';
-import img2 from '../immagini/packraft.jpg';
-import img3 from '../immagini/img3.jpg';
-import img4 from '../immagini/arrampicata.jpg';
+import img1 from '../immagini/fabioraft.jpg';
+import img2 from '../immagini/canoaprova.jpg';
+import img3 from '../immagini/canyoningtris.jpg';
+import img4 from '../immagini/trast.jpg';
 import img5 from '../immagini/trekking2.png';
 import img6 from '../immagini/survival2.jpg';
 

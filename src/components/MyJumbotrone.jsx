@@ -20,9 +20,9 @@ function MyJumbotron() {
 
         </Col>
         <Col md={8} className='text-primary text-center mt-5'>
-          <h1 className='display-5 text-white mt-2' style={{ fontFamily: 'cursive', fontStyle: 'Shadows Into Light' }}> </h1>
-          <p className='lead text-white' style={{ fontFamily: 'cursive', fontStyle: 'Vina Sans' }}>
-            VisitAniene offre a persone di tutte le età la possibilità di praticare sport a contatto con la natura. Una semplice giornata fuori porta diventerà un'esperienza indimenticabile.
+          <h1 className='display-5 text-light mt-2' style={{ fontFamily: 'cursive', fontStyle: 'Shadows Into Light' }}>VisitAniene </h1>
+          <p className='lead text-light' style={{ fontFamily: 'cursive', fontStyle: 'Pacifico' }}>
+             Una semplice giornata fuori porta diventerà un'esperienza indimenticabile.
           </p>
         </Col>
       </Row>
