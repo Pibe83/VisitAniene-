@@ -17,28 +17,26 @@ import WeatherApp from './components/MyMeteo';
 function App() {
   return (
     <Router>
-    <div className='sfondo'>
-      <Navigation />
-      <MyJumbotron />
-      
-      <Routes>
-        <Route path="/" element={<MyCarousel />} />
-        <Route path="/raftingpage" element={<RaftingPage />} />
-        <Route path="/canoa" element={<CanoaPage />} />
-        <Route path="/canyoning" element={<CanyoningPage />} />
-        <Route path="/climbing" element={<ClimbingPage />} />
-        <Route path="/trekking" element={<TrekkingPage />} />
-        <Route path="/survival" element={<SurvivalPage />} />
-      </Routes>
-      <WeatherApp />
-      <Footer />
-      
-      
-      
-      
-    </div>
-  </Router>
+      <div className='sfondo'>
+        <Navigation />
+        <MyJumbotron />
+        <Routes>
+          <Route path="/" element={<>
+            <MyCarousel />
+            <WeatherApp />
+          </>} />
+          <Route path="/raftingpage" element={<RaftingPage />} />
+          <Route path="/canoa" element={<CanoaPage />} />
+          <Route path="/canyoning" element={<CanyoningPage />} />
+          <Route path="/climbing" element={<ClimbingPage />} />
+          <Route path="/trekking" element={<TrekkingPage />} />
+          <Route path="/survival" element={<SurvivalPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+

@@ -79,8 +79,10 @@ class WeatherApp extends Component {
 
       {weatherData && (
         <div className='text-center'>
+          
           <h2 className='mt-3'>{weatherData.city.name}</h2>
           <Carousel interval={3000} pauseOnHover={true} indicators={false}>
+            
             {weatherData.list.filter((forecast) => {
               const forecastDate = new Date(forecast.dt_txt);
               const currentDate = new Date();
@@ -91,6 +93,7 @@ class WeatherApp extends Component {
             }).map((forecast, index) => (
               <Carousel.Item key={index} className='my-3'>
                
+    
                 <div className='card-deck'>
                   <div className="card border mt-2 shadow">
                     <div className="card-body">
