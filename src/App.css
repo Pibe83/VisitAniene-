@@ -88,6 +88,9 @@
   margin-right: 10px;
 }
 
+
+
+
 /* Jumbotrone */
 
 .jumbotron {
@@ -184,4 +187,34 @@
 .trip {
 
   margin-left: 190px;
+}
+/*METEO */
+.weather-section {
+  background-image: url("../src/immagini/sfondo-meteo2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* Sfondo pagine attività */
+.my-custom-class {
+  background-image: url('./immagini/sfondo-pagineattività.png');
+  
+  background-position: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* SFONDO CAROSELLO */
+
+.sfondo {
+  background-image: url('/src/immagini/sfondo-app3.png');
+  
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+
 }

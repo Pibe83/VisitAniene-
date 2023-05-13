@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { FaUtensils, FaBed, FaLandmark } from "react-icons/fa";
 
 function Navigation() {
+  
   return (
     <Navbar sticky="top" bg="white" expand="lg" className="py-3">
       <Container>
@@ -17,7 +18,7 @@ function Navigation() {
             className="d-inline-block align-top logo"
             alt="Logo"
           />
-          <span className='text-success display-5 font-weight-bold ml-3'>VisitAniene</span>
+          <span className='text-success display-5 fw-bold ml-3'>VisitAniene</span>
 
 
         </Navbar.Brand>

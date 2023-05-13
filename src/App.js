@@ -17,10 +17,10 @@ import WeatherApp from './components/MyMeteo';
 function App() {
   return (
     <Router>
-      <div className='sfondo'>
+      <div className="sfondo">
         <Navigation />
         <MyJumbotron />
-        <Routes>
+        <Routes >
           <Route path="/" element={<>
             <MyCarousel />
             <WeatherApp />

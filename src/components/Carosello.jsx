@@ -30,6 +30,7 @@ function MyCarousel() {
   }
 
   return (
+    <div className='sfondo-carosello'>
     <div className="container-fluid">
     <div className="row">
       <div className="col-md-12">
@@ -75,6 +76,7 @@ function MyCarousel() {
         </div>
       </div>
     </div>
+  </div>
   </div>
   
   )

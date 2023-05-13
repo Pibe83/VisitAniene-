@@ -61,14 +61,14 @@ class WeatherApp extends Component {
     const { city, weatherData, error } = this.state;
 
     return (
-      <div className="container text-center mt-5" >
+      <div className="container text-center mt-5 sfondo-meteo" >
 
-  <h3 className='lead text-dark'>Dai un'occhiata alla meteo prima di prenotare o prima di prepararti all'attività</h3>
+  <h3 className='lead text-dark fw-bold'>Dai un'occhiata alla meteo prima di prenotare o prima di prepararti all'attività</h3>
   <div className="row">
     <div className="col-md-6 offset-md-3">
       <form onSubmit={this.handleFormSubmit}>
         <div className="form-group">
-          <label className='mt-5' htmlFor="cityInput">Città:</label>
+          <label className='mt-5 fw-bold' htmlFor="cityInput">Città:</label>
           <input type="text" className="form-control mt-3" id="cityInput" value={city} onChange={this.handleInputChange} />
           
         </div>
@@ -91,13 +91,15 @@ class WeatherApp extends Component {
                 forecastDate.getDate() === currentDate.getDate() + 1
               );
             }).map((forecast, index) => (
-              <Carousel.Item key={index} className='my-3'>
+              <Carousel.Item key={index} className='my-3 text-gray'>
                
     
                 <div className='card-deck'>
-                  <div className="card border mt-2 shadow">
-                    <div className="card-body">
-                      <h5 className="card-title mt-2">{forecast.dt_txt}</h5>
+                  <div className="card border mt-2 shadow bg-black">
+                    <div className="card-body weather-section">
+                    <h5 className="card-title mt-2">{new Date(forecast.dt_txt).toLocaleString('it-IT', {day: 'numeric', month: 'long', year: 'numeric'})}</h5>
+                    <h5 className="card-title mt-2">{new Date(forecast.dt_txt).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}</h5>
+
                       <img
                         src={this.getWeatherIcon(forecast.weather[0].icon)}
                         alt={forecast.weather[0].description}
