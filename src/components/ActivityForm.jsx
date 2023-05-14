@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Spinner } from 'react-bootstrap';
 
 function ActivityBookingForm() {
   const [name, setName] = useState('');
@@ -10,9 +10,11 @@ function ActivityBookingForm() {
   const [hasChildren, setHasChildren] = useState(false);
   const [partecipants, setPartecipants] = useState(1);
   const [specialRequests, setSpecialRequests] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setLoading(true);
     const bookingData = {
       name,
       surname,
@@ -33,10 +35,12 @@ function ActivityBookingForm() {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data);
+        setLoading(false);
         alert('Prenotazione effettuata con successo!');
       })
       .catch((error) => {
         console.error('Error:', error);
+        setLoading(false);
         alert('Si è verificato un errore durante la prenotazione.');
       });
   };
@@ -79,7 +83,7 @@ function ActivityBookingForm() {
           <Form.Control as="textarea" value={specialRequests} onChange={e => setSpecialRequests(e.target.value)} />
         </Form.Group>
         <div className="text-center">
-          <Button type="submit" className="w-50 mt-5">Prenota</Button>
+          <Button type="submit" className="w-50 mt-5 button-prenota">Prenota</Button>
         </div>
       </Form>
     </Col>

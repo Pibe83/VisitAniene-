@@ -27,6 +27,8 @@ function MyCarousel() {
     } else if (activity === "Survival") {
       window.location.href = "/survival";
     }
+
+    
   }
 
   return (
@@ -37,39 +39,39 @@ function MyCarousel() {
         <div className="d-flex justify-content-center mt-5">
           <Carousel pauseOnHover={true} indicators={false} slideToShow={2} slideToScroll={1}>
             <Carousel.Item>
-              <img className="d-block w-30" src={img1} alt="First slide"  />
+              <img className="d-block carousel-image" src={img1} alt="First slide"  />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Rafting")}>Rafting</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Rafting")}>Rafting</button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-30" src={img2} alt="Second slide" />
+              <img className="d-block carousel-image " src={img2} alt="Second slide" />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Canoa")}>Canoa</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Canoa")}>Canoa</button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-30" src={img3} alt="Third slide" />
+              <img className="d-block carousel-image" src={img3} alt="Third slide" />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Canyoning")}>Canyoning</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Canyoning")}>Canyoning</button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-30" src={img4} alt="Fourth slide" />
+              <img className="d-block carousel-image" src={img4} alt="Fourth slide" />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Climbing")}>Climbing</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Climbing")}>Climbing</button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-30" src={img5} alt="Fifth slide" />
+              <img className="d-block carousel-image" src={img5} alt="Fifth slide" />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Trekking")}>Trekking</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Trekking")}>Trekking</button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-30" src={img6} alt="Sixth slide" />
+              <img className="d-block carousel-image" src={img6} alt="Sixth slide" />
               <Carousel.Caption>
-                <button className="btn btn-success rounded-pill" onClick={() => handleClick("Survival")}>Survival</button>
+                <button className="btn btn-success rounded-pill fw-bold" onClick={() => handleClick("Survival")}>Survival</button>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
