@@ -69,10 +69,10 @@ class WeatherApp extends Component {
       <form onSubmit={this.handleFormSubmit}>
         <div className="form-group">
           <label className='mt-5 fw-bold' htmlFor="cityInput">Città:</label>
-          <input type="text" className="form-control mt-3" id="cityInput" value={city} onChange={this.handleInputChange} />
+          <input type="text" className="form-control mt-3 input-ricerca" id="cityInput" value={city} onChange={this.handleInputChange} />
           
         </div>
-        <button type="submit" className="btn btn-success mt-5">Cerca</button>
+        <button type="submit" className="btn btn-success mt-5 button-ricerca">Cerca</button>
       </form>
 
       {error && <p>{error}</p>}
@@ -80,7 +80,7 @@ class WeatherApp extends Component {
       {weatherData && (
         <div className='text-center'>
           
-          <h2 className='mt-3'>{weatherData.city.name}</h2>
+          <h2 className='mt-3 text-white fw-bold'>{weatherData.city.name}</h2>
           <Carousel interval={3000} pauseOnHover={true} indicators={false}>
             
             {weatherData.list.filter((forecast) => {
@@ -95,18 +95,18 @@ class WeatherApp extends Component {
                
     
                 <div className='card-deck'>
-                  <div className="card border mt-2 shadow bg-black">
+                  <div className="card  mt-2 shadow bg-black">
                     <div className="card-body weather-section">
-                    <h5 className="card-title mt-2">{new Date(forecast.dt_txt).toLocaleString('it-IT', {day: 'numeric', month: 'long', year: 'numeric'})}</h5>
-                    <h5 className="card-title mt-2">{new Date(forecast.dt_txt).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}</h5>
+                    <h5 className="card-title mt-2 weather-section">{new Date(forecast.dt_txt).toLocaleString('it-IT', {day: 'numeric', month: 'long', year: 'numeric'})}</h5>
+                    <h5 className="card-title mt-2 weather-section">{new Date(forecast.dt_txt).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}</h5>
 
                       <img
                         src={this.getWeatherIcon(forecast.weather[0].icon)}
                         alt={forecast.weather[0].description}
                       />
-                      <p className="card-text">{forecast.weather[0].description}</p>
-                      <p className="card-text">Temperatura: {forecast.main.temp}°C</p>
-                      <p className="card-text">Umidità: {forecast.main.humidity}%</p>
+                      <p className="card-text weather-section">{forecast.weather[0].description}</p>
+                      <p className="card-text weather-section">Temperatura: {forecast.main.temp}°C</p>
+                      <p className="card-text weather-section">Umidità: {forecast.main.humidity}%</p>
                     </div>
                   </div>
                 </div>

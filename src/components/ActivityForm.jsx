@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Spinner } from 'react-bootstrap';
 
 function ActivityBookingForm() {
@@ -11,6 +11,7 @@ function ActivityBookingForm() {
   const [partecipants, setPartecipants] = useState(1);
   const [specialRequests, setSpecialRequests] = useState('');
   const [loading, setLoading] = useState(false);
+  const [bookings, setBookings] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,6 +38,15 @@ function ActivityBookingForm() {
         console.log('Success:', data);
         setLoading(false);
         alert('Prenotazione effettuata con successo!');
+        setName('');
+        setSurname('');
+        setEmail('');
+        setPhone('');
+        setDate('');
+        setHasChildren(false);
+        setPartecipants(1);
+        setSpecialRequests('');
+        fetchBookings();
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -45,55 +55,102 @@ function ActivityBookingForm() {
       });
   };
 
+  const fetchBookings = () => {
+    fetch('https://jsonserver-api.herokuapp.com/activities')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Bookings:', data);
+        setBookings(data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  useEffect(() => {
+    fetchBookings();
+  }, []);
+
+  const handleEdit = (booking) => {
+    setName(booking.name);
+    setSurname(booking.surname);
+    setEmail(booking.email);
+    setPhone(booking.phone);
+    setDate(booking.date);
+    setHasChildren(booking.hasChildren);
+    setPartecipants(booking.partecipants);
+    setSpecialRequests(booking.specialRequests);
+  };
+
+  const handleDelete = (bookingId) => {
+    setLoading(true);
+    fetch(`https://jsonserver-api.herokuapp.com/activities/${bookingId}`, {
+      method: 'DELETE',
+    })
+      .then(response => {
+        console.log('Success:', response);
+        setLoading(false);
+        alert('Prenotazione cancellata con successo!');
+        fetchBookings();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setLoading(false);
+        alert('Si è verificato un errore durante la cancellazione della prenotazione.');
+      });
+  };
+
   return (
-    <Container className="mt-5">
-      <h4 className="text-center mb-4">Prenota la tua esperienza</h4>
-  <Row className="justify-content-center">
-    <Col xs={12} sm={10} md={8}>
-      <Form onSubmit={handleSubmit} className="bg-white my-custom-class p-4">
-        <Form.Group>
-          <Form.Label className='fw-bold'>Nome</Form.Label>
-          <Form.Control type="text" value={name} onChange={e => setName(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Cognome</Form.Label>
-          <Form.Control type="text" value={surname} onChange={e => setSurname(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Email</Form.Label>
-          <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Telefono</Form.Label>
-          <Form.Control type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Data</Form.Label>
-          <Form.Control type="date" value={date} onChange={e => setDate(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Check className='fw-bold' type="checkbox" label="Presenza di bambini" checked={hasChildren} onChange={e => setHasChildren(e.target.checked)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Numero di partecipanti</Form.Label>
-          <Form.Control type="number" min="1" value={partecipants} onChange={e => setPartecipants(e.target.value)} />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label className='fw-bold'>Richieste speciali</Form.Label>
-          <Form.Control as="textarea" value={specialRequests} onChange={e => setSpecialRequests(e.target.value)} />
-        </Form.Group>
-        <div className="text-center">
-          <Button type="submit" className="w-50 mt-5 button-prenota">Prenota</Button>
-        </div>
-      </Form>
-    </Col>
-  </Row>
-</Container>
-
- 
-
-
-  );
+    
+      <Container>
+        
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="formName">
+            <Form.Label className='text-black fw-bold'>Nome</Form.Label>
+            <Form.Control type="text" placeholder="Inserisci il nome" value={name} onChange={e => setName(e.target.value)} required />
+          </Form.Group>
+          <Form.Group controlId="formSurname">
+            <Form.Label className='text-black fw-bold'>Cognome</Form.Label>
+            <Form.Control type="text" placeholder="Inserisci il cognome" value={surname} onChange={e => setSurname(e.target.value)} required />
+          </Form.Group>
+          <Form.Group controlId="formEmail">
+            <Form.Label className='text-black fw-bold'>Email</Form.Label>
+            <Form.Control type="email" placeholder="Inserisci l'email" value={email} onChange={e => setEmail(e.target.value)} required />
+          </Form.Group>
+          <Form.Group controlId="formPhone">
+            <Form.Label className='text-black fw-bold'>Telefono</Form.Label>
+            <Form.Control type="text" placeholder="Inserisci il numero di telefono" value={phone} onChange={e => setPhone(e.target.value)} required />
+          </Form.Group>
+          <Form.Group controlId="formDate">
+            <Form.Label className='text-black fw-bold'>Data prenotazione</Form.Label>
+            <Form.Control type="date" placeholder="Seleziona la data" value={date} onChange={e => setDate(e.target.value)} required />
+          </Form.Group>
+          <Form.Group controlId="formHasChildren">
+            <Form.Check className='text-black fw-bold' type="checkbox" label="Bambini" checked={hasChildren} onChange={e => setHasChildren(e.target.checked)} />
+          </Form.Group>
+          <Form.Group controlId="formPartecipants">
+            <Form.Label className='text-black fw-bold'>Numero partecipanti</Form.Label>
+            <Form.Control type="number" min={1} value={partecipants} onChange={e => setPartecipants(parseInt(e.target.value))} required />
+          </Form.Group>
+          <Form.Group controlId="formSpecialRequests">
+            <Form.Label className='text-black fw-bold'>Richieste speciali</Form.Label>
+            <Form.Control as="textarea" rows={3} placeholder="Inserisci eventuali richieste speciali" value={specialRequests} onChange={e => setSpecialRequests(e.target.value)} />
+          </Form.Group>
+          <Button type="submit" variant="primary" className=" center center-button">{loading ? <Spinner animation="border" size="sm" /> : 'Prenota'}</Button>
+        </Form>
+        <h2 className='text-black fw-bold text-center'>Prenotazioni effettuate</h2>
+        <ul className='text-black fw-bold text-center'>
+          {bookings.map((booking) => (
+            <li key={booking.id}>
+              <p className='text-black fw-bold'>{booking.name} {booking.surname} - {booking.date} - {booking.phone} {booking.hasChildren} {booking.partecipants} {booking.specialRequests}</p>
+              <Button variant="outline-primary" size="sm" onClick={() => handleEdit(booking)}>Modifica</Button>{' '}
+              <Button variant="outline-danger" size="sm" onClick={() => handleDelete(booking.id)}>Cancella</Button>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    );
+    
 }
 
 export default ActivityBookingForm;

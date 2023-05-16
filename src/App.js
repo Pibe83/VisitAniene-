@@ -13,16 +13,17 @@ import ClimbingPage from './components/ClimbingPage';
 import TrekkingPage from './components/TrekkingPage';
 import SurvivalPage from './components/SurvivalPage';
 import WeatherApp from './components/MyMeteo';
+import MyActivities from './components/Carosello';
 
 function App() {
   return (
     <Router>
       <div className="sfondo">
-        <Navigation />
+      <Navigation />
         <MyJumbotron />
         <Routes >
           <Route path="/" element={<>
-            <MyCarousel />
+            <MyActivities />
             <WeatherApp />
           </>} />
           <Route path="/raftingpage" element={<RaftingPage />} />

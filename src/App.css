@@ -57,7 +57,7 @@
 }
 
 .navbar-nav .nav-link {
-  color: #333333;
+  color:#FFA500;
   font-weight: bold;
   font-size: 16px;
   margin-right: 15px;
@@ -72,23 +72,30 @@
 }
 
 .dropdown-item {
-  color: #333333;
+  color:#FFA500;
   font-weight: bold;
   font-size: 14px;
 }
 
 .dropdown-item:hover {
-  background-color: #f5f5f5;
+  background-color:#FFA500;
   color: green;
 }
 
-.logo {
-  width: 100px;
-  height: 50px;
-  margin-right: 10px;
+
+
+
+#basic-nav-dropdown .dropdown-toggle {
+  color:#FFA500;
 }
 
-
+.visit-aniene {
+  background: linear-gradient(to right, #FFA500, #FFD700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 
 /* Jumbotrone */
@@ -104,7 +111,7 @@
 }
 
 .jumbotron h1 {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 .jumbotron p {
@@ -112,82 +119,91 @@
 }
 
 .text-ridotta {
-  font-size: 34px;
+  font-size: 14px;
+  color: #FFA500 !important;
 }
 
+.text-inferiore {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-style: italic;
+  color: rgb(66, 62, 62);
+}
 
 
 
 /* CAROSELLO */
-
-.carousel-item img {
-  border: 0px solid black;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.5s ease-in-out;
+.card {
+  border-radius: 10px;
+  border: none !important;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  transform-origin: center center;
 }
 
-.carousel-item:hover img {
-  transform: scale(1.1);
+.card-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-body {
+  padding: 20px;
 }
 
 .card-img-top {
-  height: 50%;
-}
-
-.carousel-item {
-  text-align: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item:hover {
-  transform: scale(1.1);
-}
-
-.carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-}
-
-.carousel-caption button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  margin-top: 10px;
-  transition: color 0.5s ease-in-out;
-}
-
-.carousel-caption button:hover {
-  
-  color: black;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.carousel-control-prev {
-  left: -3%;
-}
-
-.carousel-control-next {
-  right: -3%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none;
-}
-.btn-success{
-  width: 250px;
-}
-.carousel-img {
-  width: 100%;
-  height: 300px;
+  border-radius: 10px 10px 0 0;
+  height: 200px;
   object-fit: cover;
+}
+
+.btn-card {
+  background-color: #FFA500;
+}
+
+.btn:hover {
+  background-color: #218838;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: perspective(1000px) rotateX(-10deg) scale(1.1);
+  z-index: 2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:not(:hover) {
+  opacity: 0.7;
+}
+.button-prenota {
+  background: #FFA500 !important;
+  border-radius: 55px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-prenota::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 165, 0, 0.5) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.button-prenota:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.esperienze {
+  color: rgb(153, 146, 146);
 }
 
 
@@ -199,16 +215,27 @@
 }
 /*METEO */
 .weather-section {
-  background-image: url("../src/immagini/sfondo-meteo3.png");
+  background-color: black;
   background-size: cover;
   background-position: center;
+ color: white;
 }
-
+.input-ricerca{
+  background-color: gray !important;
+  border: none;
+  border-radius: 55px !important;
+}
+.button-ricerca{
+  border: none;
+  border-radius: 55px !important;
+background-color: #FFA500 !important;
+width: 200px;
+}
 
 
 /* Sfondo pagine attività */
 .my-custom-class {
-  background-image: url('./immagini/sfondo-pagineattività.png');
+  background-image: url('');
   
   background-position: center;
   max-width: 500px;
@@ -216,21 +243,34 @@
   padding: 20px;
 }
 
-.button-prenota{
-  background: linear-gradient(to bottom, red, orange);
-  transition: background-color 0.2s ease-in-out;
 
 
-}
 
-/* SFONDO CAROSELLO */
 
 .sfondo {
-  background-image: url('/src/immagini/sfondo-app3.png');
-  
+  background-image: url('');
+  background-color: rgb(6, 4, 4);
   background-size: cover;
   background-position: center center;
   position: relative;
   z-index: 0;
 
+} 
+
+
+
+
+/* FORM PRENOTAZIONE */
+
+Form {
+  max-width: 500px; 
+  margin: 0 auto; 
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

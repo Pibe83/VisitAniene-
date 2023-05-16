@@ -26,7 +26,7 @@ function Footer() {
         </Row>
         <Row className='mt-4'>
           <Col md={12} className='text-center'>
-            <a href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer' className='mx-2'>
+            <a href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer' className='mx-colore-icona '>
               <FaFacebook size={24} />
             </a>
             <a href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer' className='mx-2'>
