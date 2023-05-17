@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Image, Container } from 'react-bootstrap';
-import logo from '../immagini/logo3.jpg';
+
 import '../App.css';
 import { Link } from 'react-router-dom';
 import { FaUtensils, FaBed, FaLandmark, FaFacebook, FaInstagram, FaYoutube, FaGoogle } from "react-icons/fa";
@@ -21,9 +21,10 @@ function Navigation() {
 
             <Nav.Link href="/" style={{ fontFamily: '', color: 'FFA500' }}>Home</Nav.Link>
 
-             
-            <NavDropdown title="Guide" id="basic-nav-dropdown"  style={{ color: "#FFA500" }}>
-              <NavDropdown.Item href="https://www.tripadvisor.com/Restaurants-g1137663-Subiaco_Province_of_Rome_Lazio.html">
+            
+            <NavDropdown title="Guide" id="basic-nav-dropdown"  style={{color: "#FFA500" }}>
+              
+              <NavDropdown.Item  href="https://www.tripadvisor.com/Restaurants-g1137663-Subiaco_Province_of_Rome_Lazio.html">
                 <FaUtensils className="me-2" />
                 Dove mangiare
               </NavDropdown.Item>
@@ -37,7 +38,7 @@ function Navigation() {
                 Cultura e Storia
               </NavDropdown.Item>
             </NavDropdown>
-
+          
             <Nav className="ml-auto">
               <Nav.Link href="https://www.facebook.com/"><FaFacebook className="me-3" /></Nav.Link>
               <Nav.Link href="https://www.instagram.com/"><FaInstagram className="me-3" /></Nav.Link>

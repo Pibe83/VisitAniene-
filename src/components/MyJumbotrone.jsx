@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../App.css';
 
+import Nf from "../immagini/nf.jpg"
 import Freccia from "../immagini/freccia.png"
 import Navigation from './Navbar';
 
@@ -25,14 +26,18 @@ function MyJumbotron() {
         </p>
       </Col>
     </Row>
-    <Row className="bg-none d-flex flex-column align-items-center">
+    <Row className="bg-none d-flex flex-column align-items-center ">
       <Col className="py-5 text-center">
         <span className='text-ridotta fw-bold' style={{ fontSize: '2rem', fontFamily: 'Helvetica', color: 'white', textShadow: '1px 1px #000' }}>
           Scopri le nostre attività
         </span>
+        
       </Col>
-      <Col xs="auto" className="align-self-center text-start mb-3">
+      <Col xs="auto" className="align-self-center text-start mb-3 justify-content-between">
+        
         <img src={Freccia} alt="Freccia" width="50" />
+        
+        
       </Col>
     </Row>
   </Container>

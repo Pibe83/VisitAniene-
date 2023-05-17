@@ -1,6 +1,6 @@
 import { Card, Button } from 'react-bootstrap';
-import img1 from '../immagini/fabioraft.jpg';
-import img2 from '../immagini/canoaprova.jpg';
+import img1 from '../immagini/rafting1.jpg';
+import img2 from '../immagini/img2.jpg';
 import img3 from '../immagini/canyoningtris.jpg';
 import img4 from '../immagini/trast.jpg';
 import img5 from '../immagini/trekking2.png';
@@ -32,7 +32,7 @@ function MyActivities() {
   }
 
   return (
-    <div className='container'>
+    <div className='container '>
       <div className='row'>
         <h4 className='esperienze  mb-4'>Esperienze d'acqua</h4>
         
@@ -40,7 +40,7 @@ function MyActivities() {
           <Card className='card'>
             <Card.Img variant="top" src={img1} />
             <Card.Body className='bg-black'>
-              <Card.Title className=' fw-bold text-white'>Rafting</Card.Title>
+              <Card.Title className=' fw-bold  esperienze'>Rafting</Card.Title>
               <Button className='button-prenota text-black fw-bold' variant="success" onClick={() => handleClick("Rafting")}>Prenota</Button>
             </Card.Body>
           </Card>
@@ -49,7 +49,7 @@ function MyActivities() {
           <Card className='card'>
             <Card.Img variant="top" src={img2} />
             <Card.Body className='bg-black'>
-              <Card.Title className='text-white fw-bold'>Canoa</Card.Title>
+              <Card.Title className='fw-bold esperienze'>Canoa</Card.Title>
               <Button className='button-prenota text-black fw-bold' variant="success" onClick={() => handleClick("Canoa")}>Prenota</Button>
             </Card.Body>
           </Card>
@@ -58,19 +58,19 @@ function MyActivities() {
           <Card className='card'>
             <Card.Img variant="top" src={img3} />
             <Card.Body className='bg-black'>
-              <Card.Title className='text-white fw-bold'>Canyoning</Card.Title>
+              <Card.Title className='fw-bold esperienze'>Canyoning</Card.Title>
               <Button className='button-prenota text-black fw-bold' variant="success" onClick={() => handleClick("Canyoning")}>Prenota</Button>
             </Card.Body>
           </Card>
         </div>
       </div>
-      <h4 className='text-white  mb-4'>Esperienze di montagna</h4>
+      <h4 className='mb-4 esperienze'>Esperienze di montagna</h4>
       <div className='row mt-4'>
         <div className='col-md-4'>
           <Card className='card'>
             <Card.Img variant="top" src={img4} />
             <Card.Body className='bg-black'>
-              <Card.Title className='text-white fw-bold'>Arrampicata</Card.Title>
+              <Card.Title className='fw-bold esperienze'>Arrampicata</Card.Title>
               <Button className='button-prenota text-black fw-bold' variant="success" onClick={() => handleClick("Climbing")}>Prenota</Button>
             </Card.Body>
           </Card>
@@ -79,7 +79,7 @@ function MyActivities() {
           <Card className='card'>
             <Card.Img variant="top" src={img5} />
             <Card.Body className='bg-black'>
-              <Card.Title className='text-white fw-bold'>Trekking</Card.Title>
+              <Card.Title className='esperienze fw-bold'>Trekking</Card.Title>
               <Button className='button-prenota text-black fw-bold'  variant="success" onClick={() => handleClick("Trekking")}>Prenota</Button>
             </Card.Body>
           </Card>
@@ -88,7 +88,7 @@ function MyActivities() {
           <Card className='card'>
             <Card.Img variant="top" src={img6} />
             <Card.Body className='bg-black'>
-              <Card.Title className='text-white fw-bold'>Survival</Card.Title>
+              <Card.Title className='fw-bold esperienze'>Survival</Card.Title>
               <Button className='button-prenota text-black fw-bold'  onClick={() => handleClick("Survival")}>Prenota</Button>
             </Card.Body>
           </Card>

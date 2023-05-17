@@ -4,7 +4,7 @@ import ActivityForm from './ActivityForm';
 
 function ClimbingPage() {
   return (
-    <div className="container my-custom-class text-black fw-bold">
+    <div className="container my-custom-class fw-bold">
       <h1 className="text-center">Climbing</h1>
       <p className="text-center">Sulle vette più selvagge nasce l'arrampicata , uno degli sport più istintivi e coinvolgenti</p>
       <p className="text-center">Prenota per passare una giornata indimenticabile</p>

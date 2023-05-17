@@ -54,6 +54,7 @@
 
 .navbar-collapse {
   justify-content: flex-end;
+  
 }
 
 .navbar-nav .nav-link {
@@ -121,6 +122,8 @@
 .text-ridotta {
   font-size: 14px;
   color: #FFA500 !important;
+  background-image: url('../src/immagini/2.png') !important;
+  
 }
 
 .text-inferiore {
@@ -231,16 +234,20 @@
 background-color: #FFA500 !important;
 width: 200px;
 }
+.sfondo-meteo {
+  background-image: url('../src/immagini/3.png');
+}
 
 
 /* Sfondo pagine attività */
 .my-custom-class {
-  background-image: url('');
-  
+  background-image: url('../src/immagini/sfondoatt2.png');
+  background-repeat: no-repeat;
   background-position: center;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
+  color:  rgb(153, 146, 146);
 }
 
 
@@ -272,5 +279,14 @@ Form {
   justify-content: center;
   align-items: center;
 }
+
+.button-prenota {
+  background: #FFA500 !important;
+  border-radius: 55px !important;
+  width: 200px !important;
+  position: relative;
+  overflow: hidden;
+}
+
 
 

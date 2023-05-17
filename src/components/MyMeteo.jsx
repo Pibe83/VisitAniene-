@@ -63,12 +63,12 @@ class WeatherApp extends Component {
     return (
       <div className="container text-center mt-5 sfondo-meteo" >
 
-  <h3 className='lead text-dark fw-bold'>Dai un'occhiata alla meteo prima di prenotare o prima di prepararti all'attività</h3>
+  <h3 className='lead  fw-bold esperienze'>Dai un'occhiata alla meteo prima di prenotare o prima di prepararti all'attività</h3>
   <div className="row">
     <div className="col-md-6 offset-md-3">
       <form onSubmit={this.handleFormSubmit}>
         <div className="form-group">
-          <label className='mt-5 fw-bold' htmlFor="cityInput">Città:</label>
+          <label className='mt-5 fw-bold esperienze' htmlFor="cityInput">Città:</label>
           <input type="text" className="form-control mt-3 input-ricerca" id="cityInput" value={city} onChange={this.handleInputChange} />
           
         </div>
