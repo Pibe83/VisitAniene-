@@ -1,0 +1,2 @@
+(self.__LOADABLE_LOADED_CHUNKS__=self.__LOADABLE_LOADED_CHUNKS__||[]).push([[51949],{160660:(_,r,t)=>{try{0}catch(l){}var e={locale:"it",i18nStrings:void 0,plural:t(248120)};_.exports=e},248120:_=>{_.exports=function(_){return 1!=+_}}}]);
+//# sourceMappingURL=https://sm.pinimg.com/webapp/locale-it-inlined-js-584a0a74e22a51c7.mjs.map

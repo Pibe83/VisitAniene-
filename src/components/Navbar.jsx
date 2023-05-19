@@ -8,7 +8,7 @@ import { FaUtensils, FaBed, FaLandmark, FaFacebook, FaInstagram, FaYoutube, FaGo
 function Navigation() {
   
   return (
-    <Navbar  sticky="top" bg="transparent" expand="lg" className="py-3" style={{backgroundColor: "#f5f5f5"}}>
+    <Navbar  sticky="top" bg="black" expand="lg" className="py-3" style={{backgroundColor: "#f5f5f5"}}>
       <Container>
         <Navbar.Brand href="/">
         <span style={{ fontFamily: '', color: '#FFA500' }} className='display-5 fw-bold ml-3 visit-aniene'>VisitAniene</span>

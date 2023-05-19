@@ -134,6 +134,12 @@
   color: rgb(66, 62, 62);
 }
 
+.responsive-image {
+  width: 80px !important;
+  height: 80px !important;
+  margin-top: 420px;
+}
+
 
 
 /* CAROSELLO */
@@ -250,6 +256,9 @@ width: 200px;
   color:  rgb(153, 146, 146);
 }
 
+.My-custom-form {
+  background-color: #FFA500 !important;
+}
 
 
 
