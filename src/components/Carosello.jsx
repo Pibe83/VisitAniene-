@@ -64,7 +64,8 @@ function MyActivities() {
           </Card>
         </div>
       </div>
-      <h4 className='mb-4 esperienze'>Esperienze di montagna</h4>
+      <h4 className='mb-4 esperienze mb-0'>Esperienze di montagna</h4>
+      
       <div className='row mt-4'>
         <div className='col-md-4'>
           <Card className='card'>

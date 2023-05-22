@@ -107,7 +107,7 @@ function ActivityBookingForm() {
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formName" >
           <Form.Label className='My-custom-class fw-bold'>Nome</Form.Label>
-          <Form.Control className='My-custom-form' type="text" placeholder="Inserisci il nome" value={name} onChange={e => setName(e.target.value)} required />
+          <Form.Control className='My-custom-form text-color-dark' type="text" placeholder="Inserisci il nome" value={name} onChange={e => setName(e.target.value)} required />
         </Form.Group>
         <Form.Group controlId="formSurname">
           <Form.Label className='My-custom-class fw-bold'>Cognome</Form.Label>

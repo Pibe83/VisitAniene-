@@ -6,30 +6,28 @@ import nfb from "../immagini/nf10.png"
 import natg from "../immagini/ng10.png"
 import Navigation from './Navbar';
 
-
 function MyJumbotron() {
   return (
-    <Container className='mt-3' style={{ maxWidth: 'none' }}>
-      <Row className='position-relative' style={{ height: '60vh' }}>
-        <video className='full-width-video' autoPlay muted loop style={{ position: 'absolute', zIndex: '-1', width: '100%', height: '100%', objectFit: 'cover' }}>
+    <Container className='mt-3 my-jumbotron'>
+      <Row className='position-relative jumbotron-row'>
+        <video className='full-width-video' autoPlay muted loop>
           <source src={require('../immagini/video1.mp4')} type='video/mp4' />
         </video>
         <Col md={12} className='text-center'>
-          <p className='lead fw-bold text-inferiore' style={{ fontSize: '1.5rem', fontFamily: '', textShadow: '1px 1px #000' }}>
+          <p className='lead fw-bold text-inferiore'>
             Una semplice giornata fuori porta <br /> diventerà un'esperienza indimenticabile.
           </p>
         </Col>
       </Row>
-      <Row className='mt-3'>
-        <Col md={6} className='text-start'>
-          <Image src={nfb} alt="Immagine a sinistra" className="img-fluid" style={{ maxHeight: '30vh', width: 'auto', marginRight: '2rem', display: 'inline-block' }} />
+      <Row className='mt-3 align-items-center'>
+        <Col md={4} className='d-flex justify-content-end'>
+          <Image src={nfb} alt="Immagine a sinistra" className="img-fluid custom-image" />
         </Col>
-        
-        <Col md={6} className='text-end'>
-          <Image src={natg} alt="Immagine a destra" className="img-fluid" style={{ maxHeight: '30vh', width: 'auto', marginLeft: '2rem', display: 'inline-block' }} />
-        </Col>
-        <Col md={12} className='text-center'>
+        <Col md={4} className='text-center'>
           <h2 className='attività'>Scopri le nostre attività</h2>
+        </Col>
+        <Col md={4} className='d-flex justify-content-start'>
+          <Image src={natg} alt="Immagine a destra" className="img-fluid custom-image" />
         </Col>
       </Row>
     </Container>
@@ -37,3 +35,5 @@ function MyJumbotron() {
 }
 
 export default MyJumbotron;
+
+
