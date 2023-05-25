@@ -10,7 +10,7 @@ function MyJumbotron() {
   return (
     <Container className='mt-3 my-jumbotron'>
       <Row className='position-relative jumbotron-row'>
-        <video className='full-width-video' autoPlay muted loop>
+        <video className='full-width-video video-container' autoPlay muted loop>
           <source src={require('../immagini/video1.mp4')} type='video/mp4' />
         </video>
         <Col md={12} className='text-center'>

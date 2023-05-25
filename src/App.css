@@ -155,7 +155,7 @@
   z-index: -1;
   width: 100%;
   min-width: 100vw;
-  left: 49%;
+  left: 48%;
   
   transform: translateX(-50%);
   height: 100%;
@@ -164,13 +164,7 @@
 }
 
 
-.attività{
-  background: linear-gradient(to right, #FFA500, #ff7c60);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  
-}
+
 .jumbotron-row {
   height: 60vh;
 }
@@ -182,7 +176,13 @@
   margin-right: 11rem;
 }
 
-
+.attività{
+  background: linear-gradient(to right, #FFA500, #ff7c60);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+}
 
 
 /* CARD */
