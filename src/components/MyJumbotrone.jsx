@@ -4,7 +4,7 @@ import '../App.css';
 
 import nfb from "../immagini/nf10.png"
 import natg from "../immagini/ng10.png"
-import Navigation from './Navbar';
+
 
 function MyJumbotron() {
   return (

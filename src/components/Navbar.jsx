@@ -6,7 +6,7 @@ import { FaUtensils, FaBed, FaLandmark, FaFacebook, FaInstagram, FaYoutube, FaGo
 
 function Navigation() {
   return (
-    <Navbar sticky="top" bg="black" expand="lg" className="py-3" style={{ backgroundColor: "#f5f5f5" }}>
+    <Navbar sticky="top" bg="black" expand="lg" className="py-3">
       <Container>
         <Navbar.Brand href="/">
           <span className='display-5 fw-bold ml-3 visit-aniene'>VisitAniene</span>
@@ -14,7 +14,7 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto sticky-top">
-            <Nav.Link href="/" style={{ fontFamily: '', color: 'FFA500' }}>Home</Nav.Link>
+            <Nav.Link href="/" style={{ color: 'FFA500' }}>Home</Nav.Link>
             <NavDropdown title="Guide" id="basic-nav-dropdown" className="custom-dropdown">
               <NavDropdown.Item href="https://www.tripadvisor.com/Restaurants-g1137663-Subiaco_Province_of_Rome_Lazio.html">
                 <FaUtensils className="me-2 text-white" />
