@@ -3,7 +3,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../App.css';
 
 import nfb from "../immagini/nf10.png"
-import natg from "../immagini/ng10.png"
+
 import pol from "../immagini/poler-removebg-preview.png"
 
 function MyJumbotron() {

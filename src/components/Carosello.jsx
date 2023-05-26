@@ -32,7 +32,7 @@ function MyActivities() {
   }
 
   return (
-    <div className='container '>
+    <div className='container mt-4'>
       <div className='row'>
         <h4 className='esperienze  mb-4'>Esperienze d'acqua</h4>
         

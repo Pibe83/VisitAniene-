@@ -170,11 +170,12 @@
 }
 
 .custom-image {
-  max-height: 30vh;
+  max-height: 20vh;
   width: auto;
-  margin-left: 8rem;
+  margin-left: 11rem;
   margin-right: 11rem;
 }
+
 
 .attività{
   background: linear-gradient(to right, #FFA500, #ff7c60);
