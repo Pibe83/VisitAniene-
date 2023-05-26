@@ -62,7 +62,7 @@ class WeatherApp extends Component {
 
     return (
       <div className="container text-center mt-5 sfondo-meteo">
-        <h3 className='lead fw-bold esperienze'>Dai un'occhiata alla meteo prima di prenotare o prima di prepararti all'attività</h3>
+        <h3 className='lead fw-bold esperienze'>Dai un'occhiata al meteo prima di prenotare o prima di prepararti all'attività</h3>
         <div className="row">
           <Col md={3} className="d-flex align-items-center justify-content-center">
             <img src={require('../immagini/ng10.png')} alt="Foto Sinistra" className="img-fluid custom-image2" />
