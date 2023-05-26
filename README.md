@@ -53,4 +53,4 @@ Siamo aperti a contributi da parte della community. Se vuoi contribuire al proge
 Il progetto Visitaniene è rilasciato con licenza [tipo di licenza]. Per maggiori informazioni, consulta il file LICENSE. :scroll:
 
 ## Link alla versione pubblicata :computer:
-[Link alla versione pubblicata](https://github.com/Pibe83/progetto-finale)
+[Link alla versione pubblicata](https://vercel.com/pibe83/progetto-finale)
