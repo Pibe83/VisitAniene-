@@ -48,9 +48,7 @@ Siamo aperti a contributi da parte della community. Se vuoi contribuire al proge
 6. Fai commit delle tue modifiche e pusha il branch sul tuo fork.
 7. Crea una pull request nel repository originale.
 
-## Licenza :page_with_curl:
 
-Il progetto Visitaniene è rilasciato con licenza [tipo di licenza]. Per maggiori informazioni, consulta il file LICENSE. :scroll:
 
 ## Link alla versione pubblicata :computer:
 [Link alla versione pubblicata](https://vercel.com/pibe83/progetto-finale)
