@@ -4,7 +4,7 @@ import '../App.css';
 
 import nfb from "../immagini/nf10.png"
 import natg from "../immagini/ng10.png"
-
+import pol from "../immagini/poler-removebg-preview.png"
 
 function MyJumbotron() {
   return (
@@ -27,7 +27,7 @@ function MyJumbotron() {
           <h2 className='attività'>Scopri le nostre attività</h2>
         </Col>
         <Col md={4} className='d-flex justify-content-start'>
-          <Image src={natg} alt="Immagine a destra" className="img-fluid custom-image" />
+          <Image src={pol} alt="Immagine a destra" className="img-fluid custom-image" />
         </Col>
       </Row>
     </Container>

@@ -266,7 +266,8 @@
 /* footer */
 
 .trip {
-
+height: 100px;
+width: 100px;
   margin-left: 190px;
 }
 /*METEO */

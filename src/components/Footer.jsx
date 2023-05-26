@@ -1,5 +1,5 @@
 import { FaFacebook, FaInstagram, FaYoutube, FaGoogle } from 'react-icons/fa';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import tripadv from '../immagini/tripadvisor.jpg'
 
@@ -20,7 +20,9 @@ function Footer() {
             <h5>Chi siamo</h5>
             <p>VisitAniene è un'azienda che si occupa di organizzare attività outdoor per persone di tutte le età.</p>
           </Col>
-          
+          <Col md={4}>
+            <Image src={tripadv} alt='tripadvisor' className='trip' />
+          </Col>
         </Row>
         <Row className='mt-4'>
           <Col md={12} className='text-center'>

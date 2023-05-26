@@ -18,6 +18,7 @@ Il progetto Visitaniene è stato sviluppato utilizzando le seguenti tecnologie:
 - React Bootstrap :art:
 - React Router :arrows_counterclockwise:
 - OpenWeatherMap API per il meteo :cloud:
+- API proprietarie generate con JSON Server
 
 ## Requisiti :warning:
 
@@ -50,3 +51,6 @@ Siamo aperti a contributi da parte della community. Se vuoi contribuire al proge
 ## Licenza :page_with_curl:
 
 Il progetto Visitaniene è rilasciato con licenza [tipo di licenza]. Per maggiori informazioni, consulta il file LICENSE. :scroll:
+
+## Link alla versione pubblicata :computer:
+[Link alla versione pubblicata](https://github.com/Pibe83/progetto-finale)
