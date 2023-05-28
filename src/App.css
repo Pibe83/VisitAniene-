@@ -371,3 +371,7 @@ Form {
   color: #FFA500;
   font-weight: bold;
 }
+
+.btn-dettagli {
+  margin-left: 7px;
+}

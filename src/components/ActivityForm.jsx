@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Form, Button, Spinner } from 'react-bootstrap';
+import { Container, Form, Button, Spinner, Modal } from 'react-bootstrap';
 
 function ActivityBookingForm() {
   const [name, setName] = useState('');
@@ -13,6 +13,8 @@ function ActivityBookingForm() {
   const [loading, setLoading] = useState(false);
   const [bookings, setBookings] = useState([]);
   const [showSpinner, setShowSpinner] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedBooking, setSelectedBooking] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -107,10 +109,20 @@ function ActivityBookingForm() {
       });
   };
 
+  const handleShowModal = (booking) => {
+    setSelectedBooking(booking);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedBooking(null);
+    setShowModal(false);
+  };
+
   return (
     <Container>
-      <div className="text-center"> {/* Wrapper del form */}
-        <Form onSubmit={handleSubmit}>
+      <div className="text-center">
+      <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formName">
             <Form.Label className="My-custom-class fw-bold">Nome</Form.Label>
             <Form.Control
@@ -207,24 +219,64 @@ function ActivityBookingForm() {
           </Button>
         </Form>
       </div>
-      <h4 className="text-tertiary fw-bold text-center mt-4">Prenotazioni effettuate</h4>
-      <ul className="text-black fw-bold text-center">
-        {bookings.map((booking) => (
-          <li key={booking.id}>
-            <p className="my-custom-class fw-bold">
-              {booking.name} {booking.surname} - {booking.date} - {booking.phone} {booking.hasChildren} {booking.partecipants} {booking.specialRequests}
-            </p>
-            <Button className='modifica' variant="outline-primary" size="sm" onClick={() => handleEdit(booking)}>
-              Modifica
-            </Button>{" "}
-            <Button className='btn-cancella' variant="outline-danger" size="sm" onClick={() => handleDelete(booking.id)}>
-              Cancella
-            </Button>
-          </li>
-        ))}
-      </ul>
+      
+      {bookings.map((booking) => (
+        <div key={booking.id} className="text-center">
+         
+          <Button className="modifica mt-4" variant="outline-primary" size="sm" onClick={() => handleEdit(booking)}>
+            Modifica
+          </Button>{' '}
+          <Button className="btn-cancella mt-4" variant="outline-danger" size="sm" onClick={() => handleDelete(booking.id)}>
+            Cancella
+          </Button>
+          <Button className="btn-dettagli mt-4 mr-3" variant="outline-info" size="sm" onClick={() => handleShowModal(booking)}>
+            Dettagli
+          </Button>
+        </div>
+      ))}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Dettagli prenotazione</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {selectedBooking && (
+            <>
+              <p>
+                <strong>Nome:</strong> {selectedBooking.name}
+              </p>
+              <p>
+                <strong>Cognome:</strong> {selectedBooking.surname}
+              </p>
+              <p>
+                <strong>Email:</strong> {selectedBooking.email}
+              </p>
+              <p>
+                <strong>Telefono:</strong> {selectedBooking.phone}
+              </p>
+              <p>
+                <strong>Data prenotazione:</strong> {selectedBooking.date}
+              </p>
+              <p>
+                <strong>Bambini:</strong> {selectedBooking.hasChildren ? 'Si' : 'No'}
+              </p>
+              <p>
+                <strong>Numero partecipanti:</strong> {selectedBooking.partecipants}
+              </p>
+              <p>
+                <strong>Richieste speciali:</strong> {selectedBooking.specialRequests}
+              </p>
+            </>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Chiudi
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 }
 
 export default ActivityBookingForm;
+
