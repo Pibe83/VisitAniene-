@@ -373,5 +373,8 @@ Form {
 }
 
 .btn-dettagli {
-  margin-left: 7px;
+  border-radius: 55px !important;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
 }

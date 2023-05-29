@@ -221,19 +221,21 @@ function ActivityBookingForm() {
       </div>
       
       {bookings.map((booking) => (
-        <div key={booking.id} className="text-center">
-         
-          <Button className="modifica mt-4" variant="outline-primary" size="sm" onClick={() => handleEdit(booking)}>
-            Modifica
-          </Button>{' '}
-          <Button className="btn-cancella mt-4" variant="outline-danger" size="sm" onClick={() => handleDelete(booking.id)}>
-            Cancella
-          </Button>
-          <Button className="btn-dettagli mt-4 mr-3" variant="outline-info" size="sm" onClick={() => handleShowModal(booking)}>
-            Dettagli
-          </Button>
-        </div>
-      ))}
+  <div key={booking.id} className="button-wrapper">
+    <div className="d-flex flex-column align-items-center">
+      <Button className="modifica mt-4" variant="outline-primary" size="sm" onClick={() => handleEdit(booking)}>
+        Modifica
+      </Button>
+      <Button className="btn-cancella mt-4" variant="outline-danger" size="sm" onClick={() => handleDelete(booking.id)}>
+        Cancella
+      </Button>
+      <Button className="btn-dettagli mt-4" variant="outline-info" size="sm" onClick={() => handleShowModal(booking)}>
+        Dettagli
+      </Button>
+    </div>
+  </div>
+))}
+
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Dettagli prenotazione</Modal.Title>
