@@ -11,7 +11,7 @@ function MyJumbotron() {
     <Container className='mt-3 my-jumbotron'>
       <Row className='position-relative jumbotron-row'>
         <video className='full-width-video video-container' autoPlay muted loop>
-          <source src={require('../immagini/video3.mp4')} type='video/mp4' />
+          <source src={require('../immagini/video1.mp4')} type='video/mp4' />
         </video>
         <Col md={12} className='text-center'>
           <p className='lead fw-bold text-inferiore'>
